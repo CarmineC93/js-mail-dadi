@@ -2,10 +2,21 @@
 Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
 //Chiedo all'utente/giocatore un numero da 1 a 6, e salvo la risposta in un variabile
+const playerNum = parseInt(prompt("Scegli un numero da 1 a 6 compresi")) ;
 
 //salvo in una variabile il numero da 1 a 6 del computer, tramite math.random 
+const computerNum = Math.floor(Math.random() * (6 - 1 + 1 )) +1;
+
+//verifichiamo entrambi
+console.log(`${playerNum} vs ${computerNum}`);
 
 //Se il numero del giocatore è superiore a quello del computer, l'utente ha vinto
-    //se invece è minore, il computer ha vinto,
-      //altrimenti c'è pareggio
-
+if (playerNum > computerNum){
+    alert("Complimenti, hai vinto!");
+} //se invece è minore, il computer ha vinto,
+    else if (playerNum < computerNum){
+        alert("Peccato, hai perso");
+    } //altrimenti c'è pareggio
+        else {
+            alert("Parità!");
+        }
