@@ -3,6 +3,9 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
 //Chiedo all'utente/giocatore un numero da 1 a 6, e salvo la risposta in un variabile
 const playerNum = parseInt(prompt("Scegli un numero da 1 a 6 compresi")) ;
+if( playerNum > 7 ||  playerNum < 0 ){
+    alert("Per giocare inserisci un valore tra 1 e 6!")
+}
 
 //salvo in una variabile il numero da 1 a 6 del computer, tramite math.random 
 const computerNum = Math.floor(Math.random() * (6 - 1 + 1 )) +1;
